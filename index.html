@@ -1455,7 +1455,7 @@ function openResults(){
   G.phase='results';
   const sc=G.score,stars=sc.pct>=100?3:sc.pct>=75?2:sc.pct>=45?1:0;
   const verdict=sc.pct>=100?'Безупречно! Ты — настоящий архитектор математики!'
-    :sc.pct>=75?'Отличная стройка! До идеала совсем чуть-чуть.'
+    :sc.pct>=75?'Отличная стройка! До совершенства совсем чуть-чуть.'
     :sc.pct>=45?'Хорошая работа! Попробуй ещё раз в новой игре.'
     :'Дом построен! Потренируйся — и в следующий раз будет 100%.';
   const name=store.get('dm_name','');
@@ -1465,7 +1465,7 @@ function openResults(){
       ${G.penalties.map(p=>`<div class="pen-row"><span>${p.label}</span><i>${p.detail}</i><b>−${p.pts}</b></div>`).join('')}
     </div>`:'';
   $('#res-body').innerHTML=`
-    ${sc.pct===100?'<span class="perfect-ribbon">ИДЕАЛЬНО · 100%</span><br>':''}
+    ${sc.pct===100?'<span class="perfect-ribbon">Маш Аллаh · 100%</span><br>':''}
     <span class="stamp" style="--pc:var(--terra-600)">Результат</span>
     <div class="ring-wrap">
       <svg viewBox="0 0 150 150">
